@@ -1,0 +1,384 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title> 对象拷贝 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="正则表达式.html" />
+    
+    
+    <link rel="prev" href="数组.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../markdown.html">
+            
+                <a href="../markdown.html">
+            
+                    
+                    markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="README.md">
+            
+                <span>
+            
+                    
+                    javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="数组.html">
+            
+                <a href="数组.html">
+            
+                    
+                     数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.2" data-path="对象拷贝.html">
+            
+                <a href="对象拷贝.html">
+            
+                    
+                     对象拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="正则表达式.html">
+            
+                <a href="正则表达式.html">
+            
+                    
+                     正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="url详解.html">
+            
+                <a href="url详解.html">
+            
+                    
+                     url详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../ember.md">
+            
+                <span>
+            
+                    
+                    ember
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../ember/ember-concurrency.html">
+            
+                <a href="../ember/ember-concurrency.html">
+            
+                    
+                     ember
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." > 对象拷贝</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6DF1;&#x62F7;&#x8D1D;--&#x6D45;&#x62F7;&#x8D1D;">&#x6DF1;&#x62F7;&#x8D1D;  &#x6D45;&#x62F7;&#x8D1D;</h1>
+<p>&#x6807;&#x7B7E;&#xFF08;&#x7A7A;&#x683C;&#x5206;&#x9694;&#xFF09;&#xFF1A; js</p>
+<hr>
+<p>&#x672C;&#x6587;&#x4E2D;&#x7684;&#x590D;&#x5236;&#x4E5F;&#x53EF;&#x4EE5;&#x79F0;&#x4E3A;&#x62F7;&#x8D1D;&#xFF0C;&#x5728;&#x672C;&#x6587;&#x4E2D;&#x8BA4;&#x4E3A;&#x590D;&#x5236;&#x548C;&#x62F7;&#x8D1D;&#x662F;&#x76F8;&#x540C;&#x7684;&#x610F;&#x601D;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x672C;&#x6587;&#x53EA;&#x8BA8;&#x8BBA;js&#x4E2D;&#x590D;&#x6742;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x590D;&#x5236;&#x95EE;&#x9898;&#xFF08;Object,Array&#x7B49;&#xFF09;&#xFF0C;&#x4E0D;&#x8BA8;&#x8BBA;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF08;null,undefined,string,number&#x548C;boolean&#xFF09;&#xFF0C;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x672C;&#x8EAB;&#x5C31;&#x5B58;&#x50A8;&#x5728;&#x6808;&#x5185;&#x5B58;&#x4E2D;(string&#x7C7B;&#x578B;&#x7684;&#x5B9E;&#x9645;&#x503C;&#x8FD8;&#x662F;&#x5B58;&#x50A8;&#x5728;&#x5806;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#xFF0C;&#x4F46;&#x662F;js&#x628A;string&#x5F53;&#x505A;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x6765;&#x5904;&#x7406; )&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5F15;&#x7528;&#x503C;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x6D45;&#x590D;&#x5236;&#x548C;&#x6DF1;&#x590D;&#x5236;&#x90FD;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5728;&#x5DF2;&#x6709;&#x5BF9;&#x8C61;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x518D;&#x751F;&#x4E00;&#x4EFD;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#x662F;&#x5B58;&#x50A8;&#x5728;&#x5806;&#x5185;&#x5B58;&#x4E2D;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x503C;&#x53BB;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#xFF0C;&#x7531;&#x6B64;&#x590D;&#x5236;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x5B58;&#x5728;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x4E86;&#xFF1A;&#x590D;&#x5236;&#x5F15;&#x7528;&#x548C;&#x590D;&#x5236;&#x5B9E;&#x4F8B;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x6D45;&#x590D;&#x5236;&#x548C;&#x6DF1;&#x590D;&#x5236;&#x7684;&#x533A;&#x522B;&#x6240;&#x5728;&#x3002;</p>
+<p><strong>&#x6D45;&#x62F7;&#x8D1D;</strong>&#xFF1A;&#x6D45;&#x590D;&#x5236;&#x662F;&#x590D;&#x5236;&#x5F15;&#x7528;&#xFF0C;&#x590D;&#x5236;&#x540E;&#x7684;&#x5F15;&#x7528;&#x90FD;&#x662F;&#x6307;&#x5411;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5F7C;&#x6B64;&#x4E4B;&#x95F4;&#x7684;&#x64CD;&#x4F5C;&#x4F1A;&#x4E92;&#x76F8;&#x5F71;&#x54CD;</p>
+<p><strong>&#x6DF1;&#x62F7;&#x8D1D;</strong>&#xFF1A;&#x6DF1;&#x590D;&#x5236;&#x4E0D;&#x662F;&#x7B80;&#x5355;&#x7684;&#x590D;&#x5236;&#x5F15;&#x7528;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x5806;&#x4E2D;&#x91CD;&#x65B0;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x4E14;&#x628A;&#x6E90;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x90FD;&#x8FDB;&#x884C;&#x65B0;&#x5EFA;&#x590D;&#x5236;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x6DF1;&#x590D;&#x5236;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x56FE;&#x4E0D;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x539F;&#x6709;&#x5BF9;&#x8C61;&#x6216;&#x5BF9;&#x8C61;&#x56FE;&#x4E0A;&#x7684;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#xFF0C;&#x590D;&#x5236;&#x540E;&#x7684;&#x5BF9;&#x8C61;&#x4E0E;&#x539F;&#x6765;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x5B8C;&#x5168;&#x9694;&#x79BB;&#x7684;</p>
+<h2 id="&#x6D45;&#x62F7;&#x8D1D;">&#x6D45;&#x62F7;&#x8D1D;</h2>
+<h3 id="&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;</h3>
+<pre><code>var a = 1;
+var b = a;
+console.log(a===b); // true
+b = 2; // a = 1  &#x4F1A;&#x76F8;&#x4E92;&#x5F71;&#x54CD;&#x7684;  &#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x5C5E;&#x4E8E;&#x57FA;&#x672C;&#x7C7B;&#x578B;
+</code></pre><h3 id="&#x5BF9;&#x8C61;">&#x5BF9;&#x8C61;</h3>
+<pre><code>var src = {
+       name:&quot;src&quot;
+   }
+//&#x590D;&#x5236;&#x4E00;&#x4EFD;src&#x5BF9;&#x8C61;&#x7684;&#x5E94;&#x7528;
+var target = src;
+target.name = &quot;target&quot;;
+console.log(src.name);   //&#x8F93;&#x51FA;target
+</code></pre><h3 id="&#x6570;&#x7EC4;">&#x6570;&#x7EC4;</h3>
+<pre><code>//&#x6D45;&#x62F7;&#x8D1D;&#xFF0C;&#x53CC;&#x5411;&#x6539;&#x53D8;,&#x6307;&#x5411;&#x540C;&#x4E00;&#x7247;&#x5185;&#x5B58;&#x7A7A;&#x95F4;
+var arr1 = [1, 2, 3];
+var arr2 = arr1;
+arr1[0] = &apos;change&apos;;
+console.log(&apos;shallow copy: &apos; + arr1 + &quot; );   //shallow copy: change,2,3
+console.log(&apos;shallow copy: &apos; + arr2 + &quot; );   //shallow copy: change,2,3
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="数组.html" class="navigation navigation-prev " aria-label="Previous page:  数组">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="正则表达式.html" class="navigation navigation-next " aria-label="Next page:  正则表达式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":" 对象拷贝","level":"2.2.2","depth":2,"next":{"title":" 正则表达式","level":"2.2.3","depth":2,"path":"javascript/正则表达式.md","ref":"javascript/正则表达式.md","articles":[]},"previous":{"title":" 数组","level":"2.2.1","depth":2,"path":"javascript/数组.md","ref":"javascript/数组.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript/对象拷贝.md","mtime":"2018-03-23T07:54:47.246Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-23T07:48:14.809Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
